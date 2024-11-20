@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\build\common.props" />
+
+    <PropertyGroup>
+        <Description>$(Product) kafka data transmitter.</Description>
+        <AssemblyTitle>$(PackagePrefix).Transport.Kafka</AssemblyTitle>
+        <AssemblyName>$(PackagePrefix).Transport.Kafka</AssemblyName>
+        <PackageId>$(PackagePrefix).Transport.Kafka</PackageId>
+        <PackageTags>SkyWalking;Kafka</PackageTags>
+        <PackageReleaseNotes>
+        </PackageReleaseNotes>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>SkyApm.Transport.Kafka</RootNamespace>
+    </PropertyGroup>
+</Project>

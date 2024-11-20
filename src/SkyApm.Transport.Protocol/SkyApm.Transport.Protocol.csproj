@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\build\common.props" />
+
+    <PropertyGroup>
+        <Description>$(Product) data protocol.</Description>
+        <AssemblyTitle>$(PackagePrefix).Transport.Protocol</AssemblyTitle>
+        <AssemblyName>$(PackagePrefix).Transport.Protocol</AssemblyName>
+        <PackageId>$(PackagePrefix).Transport.Protocol</PackageId>
+        <PackageTags>SkyWalking;Protocol</PackageTags>
+        <PackageReleaseNotes>
+        </PackageReleaseNotes>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>SkyApm.Transport.Protocol</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Protobuf Include="protocol-v3/**/*.proto" ProtoRoot="protocol-v3" OutputDir="generated-v3" GrpcServices="Client" GrpcOutputDir="../SkyApm.Transport.Grpc/generated-v3" CompileOutputs="false" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <Protobuf_NoWarnMissingExpected>true</Protobuf_NoWarnMissingExpected>
+        <Protobuf_TouchMissingExpected>true</Protobuf_TouchMissingExpected>
+    </PropertyGroup>
+</Project>

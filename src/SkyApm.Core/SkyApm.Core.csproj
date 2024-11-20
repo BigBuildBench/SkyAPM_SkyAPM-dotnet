@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\build\common.props" />
+
+    <PropertyGroup>
+        <Description>$(Product) core components.</Description>
+        <AssemblyTitle>$(PackagePrefix).Core</AssemblyTitle>
+        <AssemblyName>$(PackagePrefix).Core</AssemblyName>
+        <PackageId>$(PackagePrefix).Core</PackageId>
+        <PackageTags>SkyWalking;APM</PackageTags>
+        <PackageReleaseNotes>
+        </PackageReleaseNotes>
+        <RootNamespace>SkyApm</RootNamespace>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DefineConstants Condition="'$(TargetFramework)' == 'netcoreapp2.1'">$(DefineConstants);SPAN</DefineConstants>
+    </PropertyGroup>
+</Project>
